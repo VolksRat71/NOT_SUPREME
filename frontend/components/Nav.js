@@ -1,18 +1,34 @@
-import Link from 'next/link'
+import Link from 'next/link';
+import NavStyles from './styles/NavStyles';
 
 const Nav = props => (
-    <>
-        <Link>
-            <a href="/sell">
-                <p>Sell Page</p>
+    <NavStyles>
+        <Link href="/items">
+            <a>
+                <p>Items</p>
             </a>
         </Link>
-        <Link>
-            <a href="/">
-                <p>Home Page</p>
+        <Link href="/sell">
+            <a>
+                <p>Sell</p>
             </a>
         </Link>
-    </>
+        <Link href="/signup">
+            <a>
+                <p>Signup</p>
+            </a>
+        </Link>
+        <Link href="/orders">
+            <a>
+                <p>Orders</p>
+            </a>
+        </Link>
+        <Link href="/me">
+            <a>
+                <p>Account</p>
+            </a>
+        </Link>
+    </NavStyles>
 )
 
 export default Nav;
