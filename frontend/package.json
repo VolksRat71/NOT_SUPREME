@@ -1,7 +1,7 @@
 {
-  "name": "sick-fits-frontend",
+  "name": "not-supreme-frontend",
   "version": "1.0.0",
-  "description": "Sick Fits! An example React, GraphQL, Next and Apollo",
+  "description": "Not Supreme. An example React, GraphQL, Next and Apollo",
   "main": "index.js",
   "scripts": {
     "dev": "next -p 7777",
