@@ -1,4 +1,4 @@
-require('dotenv').config({ path: 'variable.env' });
+require('dotenv').config({ path: 'variables.env' });
 const createServer = require('./createServer');
 const db = require('./db');
 
