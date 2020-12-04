@@ -5,7 +5,7 @@ const Nav = props => (
     <NavStyles>
         <Link href="/items">
             <a>
-                <p>Items</p>
+                <p>Shop</p>
             </a>
         </Link>
         <Link href="/sell">
