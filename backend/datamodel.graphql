@@ -7,7 +7,7 @@ type User {
 type Item {
   id: ID! @id
   title: String!
-  descritption: String!
+  description: String!
   image: String
   largeImage: String
   price: Int!

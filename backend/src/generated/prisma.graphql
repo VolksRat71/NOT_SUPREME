@@ -1,5 +1,5 @@
 # source: https://us1.prisma.sh/nate-ryan-395598/NotSupreme/dev
-# timestamp: Tue Dec 01 2020 20:48:25 GMT-0600 (Central Standard Time)
+# timestamp: Sat Dec 05 2020 16:12:17 GMT-0600 (Central Standard Time)
 
 type AggregateItem {
   count: Int!
@@ -17,7 +17,7 @@ type BatchPayload {
 type Item implements Node {
   id: ID!
   title: String!
-  descritption: String!
+  description: String!
   image: String
   largeImage: String
   price: Int!
@@ -36,7 +36,7 @@ type ItemConnection {
 input ItemCreateInput {
   id: ID
   title: String!
-  descritption: String!
+  description: String!
   image: String
   largeImage: String
   price: Int!
@@ -56,8 +56,8 @@ enum ItemOrderByInput {
   id_DESC
   title_ASC
   title_DESC
-  descritption_ASC
-  descritption_DESC
+  description_ASC
+  description_DESC
   image_ASC
   image_DESC
   largeImage_ASC
@@ -69,7 +69,7 @@ enum ItemOrderByInput {
 type ItemPreviousValues {
   id: ID!
   title: String!
-  descritption: String!
+  description: String!
   image: String
   largeImage: String
   price: Int!
@@ -116,7 +116,7 @@ input ItemSubscriptionWhereInput {
 
 input ItemUpdateInput {
   title: String
-  descritption: String
+  description: String
   image: String
   largeImage: String
   price: Int
@@ -124,7 +124,7 @@ input ItemUpdateInput {
 
 input ItemUpdateManyMutationInput {
   title: String
-  descritption: String
+  description: String
   image: String
   largeImage: String
   price: Int
@@ -219,46 +219,46 @@ input ItemWhereInput {
 
   """All values not ending with the given string."""
   title_not_ends_with: String
-  descritption: String
+  description: String
 
   """All values that are not equal to given value."""
-  descritption_not: String
+  description_not: String
 
   """All values that are contained in given list."""
-  descritption_in: [String!]
+  description_in: [String!]
 
   """All values that are not contained in given list."""
-  descritption_not_in: [String!]
+  description_not_in: [String!]
 
   """All values less than the given value."""
-  descritption_lt: String
+  description_lt: String
 
   """All values less than or equal the given value."""
-  descritption_lte: String
+  description_lte: String
 
   """All values greater than the given value."""
-  descritption_gt: String
+  description_gt: String
 
   """All values greater than or equal the given value."""
-  descritption_gte: String
+  description_gte: String
 
   """All values containing the given string."""
-  descritption_contains: String
+  description_contains: String
 
   """All values not containing the given string."""
-  descritption_not_contains: String
+  description_not_contains: String
 
   """All values starting with the given string."""
-  descritption_starts_with: String
+  description_starts_with: String
 
   """All values not starting with the given string."""
-  descritption_not_starts_with: String
+  description_not_starts_with: String
 
   """All values ending with the given string."""
-  descritption_ends_with: String
+  description_ends_with: String
 
   """All values not ending with the given string."""
-  descritption_not_ends_with: String
+  description_not_ends_with: String
   image: String
 
   """All values that are not equal to given value."""
