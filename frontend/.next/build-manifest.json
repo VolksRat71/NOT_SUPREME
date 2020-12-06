@@ -15,6 +15,10 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/sell": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"

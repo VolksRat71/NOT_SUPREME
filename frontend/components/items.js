@@ -39,8 +39,8 @@ class Items extends Component {
                         if (error) return <p>Error: {error.message}</p>
                         return (
                         <ItemsList>
-                            {data.item.map(item => {
-                                <Item key={item.id} item={item} />
+                            {data.items.map(item => {
+                                return <Item key={item.id} item={item} />
                             })}
                         </ItemsList>
                         )

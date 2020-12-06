@@ -127,7 +127,7 @@ function (_Component) {
           lineNumber: 29
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 33
@@ -277,8 +277,8 @@ function (_Component) {
             lineNumber: 41
           },
           __self: this
-        }, data.item.map(function (item) {
-          react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Item__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        }, data.items.map(function (item) {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Item__WEBPACK_IMPORTED_MODULE_4__["default"], {
             key: item.id,
             item: item,
             __source: {

@@ -30,7 +30,7 @@ class Item extends Component {
                         pathname: 'update',
                         query: { id: item.id }
                     }}>
-                        <a>Edit</a>
+                        <button>Edit</button>
                     </Link>
                     <button>Add to Cart</button>
                     <button>Delete Item</button>
