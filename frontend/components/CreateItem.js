@@ -41,13 +41,34 @@ class CreateItem extends Component {
         this.setState({ [name]: val })
     }
 
+    uploadFile = async e => {
+        console.log("uploading file ...");
+        const files = e.target.files;
+        const data = new FormData();
+        data.append('file',  files[0]);
+        data.append('upload_present', 'NotSupreme');
+
+        const res = await fetch(
+            'https://api.cloudinary.com/v1_1/notsupreme/image/upload',
+            {
+                method: 'POST',
+                body: data
+            }
+        )
+
+        const file = await res.json();
+        this.setState({
+            image: file.secure_url,
+            largeImage: file.eager[0].secure_url
+        });
+    }
+
     render() {
         return (
             <Mutation
                 mutation={CREATE_ITEM_MUTATION}
                 variables={this.state}>
                 {(createItem, { loading, error }) => (
-
                     <Form onSubmit={async e => {
                         e.preventDefault();
                         const res = await createItem();
@@ -58,9 +79,20 @@ class CreateItem extends Component {
                     }}>
                         <Error error={error} />
                         <fieldset disabled={loading} aria-busy={loading}>
+                            <label htmlFor="file">
+                                Image
+                                <input
+                                    type="file"
+                                    id="file"
+                                    name="file"
+                                    placeholder="Upload an image"
+                                    required
+                                    onChange={this.uploadFile}
+                                />
+                            </label>
                             <label htmlFor="title">
                                 Title
-                        <input
+                                <input
                                     type="text"
                                     id="title"
                                     name="title"
@@ -72,7 +104,7 @@ class CreateItem extends Component {
                             </label>
                             <label htmlFor="price">
                                 Price
-                        <input
+                                <input
                                     type="number"
                                     id="price"
                                     name="price"
@@ -84,7 +116,7 @@ class CreateItem extends Component {
                             </label>
                             <label htmlFor="description">
                                 Description
-                        <textarea
+                                <textarea
                                     id="description"
                                     name="description"
                                     placeholder="Enter A Description"

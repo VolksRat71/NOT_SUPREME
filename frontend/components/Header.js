@@ -26,6 +26,7 @@ const Logo = styled.h1`
         background: ${props => props.theme.red};
         padding: 0.5rem 1rem;
         color: white;
+        text-transform: uppercase;
         text-decoration: none;
     }
     @media (max-width: 1300px) {
@@ -58,7 +59,7 @@ const Header = props => (
         <div className="bar">
             <Logo>
                 <Link href="/">
-                    <a>"Not" Supreme</a>
+                    <a>Not Supreme</a>
                 </Link>
             </Logo>
             <Nav />
