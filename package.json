@@ -1,0 +1,18 @@
+{
+  "name": "NotSupreme",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "echo \"Error: no \"start\" script specified, try \"npm run dev\"",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "install": "cd backend && npm i && cd ../frontend && npm i"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "if-env": "^1.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
