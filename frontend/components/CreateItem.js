@@ -28,11 +28,11 @@ const CREATE_ITEM_MUTATION = gql`
 
 class CreateItem extends Component {
     state = {
-        title: 'Mask Cat',
-        description: 'Judgy Bitch will start at you.',
-        image: 'https://image.shutterstock.com/image-photo/cat-medical-mask-protective-antiviral-260nw-1684423789.jpg',
-        largeImage: 'https://image.shutterstock.com/image-photo/cat-medical-mask-protective-antiviral-260nw-1684423789.jpg',
-        price: 20
+        title: '',
+        description: '',
+        image: '',
+        largeImage: '',
+        price: 0
     }
 
     handleChange = e => {
@@ -42,26 +42,23 @@ class CreateItem extends Component {
     }
 
     uploadFile = async e => {
-        console.log("uploading file ...");
+        console.log('uploading file...');
         const files = e.target.files;
         const data = new FormData();
-        data.append('file',  files[0]);
-        data.append('upload_present', 'NotSupreme');
+        data.append('file', files[0]);
+        data.append('upload_preset', 'notsupreme');
 
-        const res = await fetch(
-            'https://api.cloudinary.com/v1_1/notsupreme/image/upload',
-            {
-                method: 'POST',
-                body: data
-            }
-        )
-
+        const res = await fetch('https://api.cloudinary.com/v1_1/notsupreme/image/upload', {
+            method: 'POST',
+            body: data,
+        });
         const file = await res.json();
+        console.log(file);
         this.setState({
             image: file.secure_url,
-            largeImage: file.eager[0].secure_url
+            largeImage: file.eager[0].secure_url,
         });
-    }
+    };
 
     render() {
         return (

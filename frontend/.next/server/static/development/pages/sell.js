@@ -183,11 +183,11 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(CreateItem)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
-      title: 'Mask Cat',
-      description: 'Judgy Bitch will start at you.',
-      image: 'https://image.shutterstock.com/image-photo/cat-medical-mask-protective-antiviral-260nw-1684423789.jpg',
-      largeImage: 'https://image.shutterstock.com/image-photo/cat-medical-mask-protective-antiviral-260nw-1684423789.jpg',
-      price: 20
+      title: '',
+      description: '',
+      image: '',
+      largeImage: '',
+      price: 0
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleChange", function (e) {
@@ -211,11 +211,11 @@ function (_Component) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                console.log("uploading file ...");
+                console.log('uploading file...');
                 files = e.target.files;
                 data = new FormData();
                 data.append('file', files[0]);
-                data.append('upload_present', 'NotSupreme');
+                data.append('upload_preset', 'notsupreme');
                 _context.next = 7;
                 return fetch('https://api.cloudinary.com/v1_1/notsupreme/image/upload', {
                   method: 'POST',
@@ -229,13 +229,14 @@ function (_Component) {
 
               case 10:
                 file = _context.sent;
+                console.log(file);
 
                 _this.setState({
-                  image: file.secure_url //     largeImage: file.eager[0].secure_url
-
+                  image: file.secure_url,
+                  largeImage: file.eager[0].secure_url
                 });
 
-              case 12:
+              case 13:
               case "end":
                 return _context.stop();
             }
@@ -261,7 +262,7 @@ function (_Component) {
         variables: this.state,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 65
         },
         __self: this
       }, function (createItem, _ref2) {
@@ -306,14 +307,14 @@ function (_Component) {
           }(),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 72
+            lineNumber: 69
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ErrorMessage__WEBPACK_IMPORTED_MODULE_6__["default"], {
           error: error,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 80
+            lineNumber: 77
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", {
@@ -321,14 +322,14 @@ function (_Component) {
           "aria-busy": loading,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 81
+            lineNumber: 78
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "file",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 82
+            lineNumber: 79
           },
           __self: this
         }, "Image", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -340,14 +341,14 @@ function (_Component) {
           onChange: _this2.uploadFile,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 84
+            lineNumber: 81
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "title",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 93
+            lineNumber: 90
           },
           __self: this
         }, "Title", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -360,14 +361,14 @@ function (_Component) {
           onChange: _this2.handleChange,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 95
+            lineNumber: 92
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "price",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 105
+            lineNumber: 102
           },
           __self: this
         }, "Price", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -380,14 +381,14 @@ function (_Component) {
           onChange: _this2.handleChange,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 107
+            lineNumber: 104
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "description",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 117
+            lineNumber: 114
           },
           __self: this
         }, "Description", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("textarea", {
@@ -399,14 +400,14 @@ function (_Component) {
           onChange: _this2.handleChange,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 119
+            lineNumber: 116
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
           type: "submit",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 128
+            lineNumber: 125
           },
           __self: this
         }, "Submit")));
