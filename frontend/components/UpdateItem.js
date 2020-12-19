@@ -62,7 +62,7 @@ class UpdateItem extends Component {
 
     render() {
         return (
-            <Query query={SINGLE_ITEM_QUERY} variables={{
+            <Query query={ SINGLE_ITEM_QUERY } variables={{
                     id: this.props.id
                 }}>
                 {({ data, loading }) => {
@@ -70,14 +70,14 @@ class UpdateItem extends Component {
                     if(!data.item) return <p>No item found for ID:"{this.props.id}"</p>
                     return (
                         <Mutation
-                            mutation={UPDATE_ITEM_MUTATION}
-                            variables={this.state}>
+                            mutation={ UPDATE_ITEM_MUTATION }
+                            variables={ this.state }>
                             {(updateItem, { loading, error }) => (
                                 <Form onSubmit={e => {
                                     this.updateItem(e, updateItem)
                                 }}>
-                                    <Error error={error} />
-                                    <fieldset disabled={loading} aria-busy={loading}>
+                                    <Error error={ error } />
+                                    <fieldset disabled={ loading } aria-busy={loading}>
                                         <label htmlFor="title">
                                             Title
                                             <input
@@ -87,7 +87,7 @@ class UpdateItem extends Component {
                                                 placeholder="Title"
                                                 required
                                                 defaultValue={data.item.title}
-                                                onChange={this.handleChange}
+                                                onChange={ this.handleChange }
                                             />
                                         </label>
                                         <label htmlFor="price">
@@ -99,7 +99,7 @@ class UpdateItem extends Component {
                                                 placeholder="Price"
                                                 required
                                                 defaultValue={data.item.price}
-                                                onChange={this.handleChange}
+                                                onChange={ this.handleChange }
                                             />
                                         </label>
                                         <label htmlFor="description">
@@ -110,7 +110,7 @@ class UpdateItem extends Component {
                                                 placeholder="Enter A Description"
                                                 required
                                                 defaultValue={data.item.description}
-                                                onChange={this.handleChange}
+                                                onChange={ this.handleChange }
                                             />
                                         </label>
                                         <button

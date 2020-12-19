@@ -47,18 +47,18 @@ injectGlobal`
     }
     a {
         text-decoration: none;
-        color: ${theme.black};
+        color: ${ theme.black };
     }
 `
 
 class Page extends Component {
     render() {
         return (
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={ theme }>
                 <StyledPage>
                     <Meta />
                     <Header />
-                    <Inner>{this.props.children}</Inner>
+                    <Inner>{ this.props.children }</Inner>
                 </StyledPage>
             </ThemeProvider>
         )

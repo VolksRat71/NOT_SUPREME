@@ -16,15 +16,15 @@ class Item extends Component {
         const { item } = this.props
         return (
             <ItemStyles>
-                {item.image && <img src={item.image} alt={item.title} />}
+                {item.image && <img src={ item.image } alt={ item.title } />}
                 <Link href={{
                     pathname: '/item',
                     query: { id: item.id }
                 }}>
-                    <Title><a>{item.title}</a></Title>
+                    <Title><a>{ item.title }</a></Title>
                 </Link>
                 <PriceTag>{formatMoney(item.price)}</PriceTag>
-                <p>{item.description}</p>
+                <p>{ item.description }</p>
 
                 <div className='buttonList'>
                     <Link href={{
@@ -34,7 +34,7 @@ class Item extends Component {
                         <button>Edit</button>
                     </Link>
                     <button>Add to Cart</button>
-                    <DeleteItem id={item.id}>Delete Item</DeleteItem>
+                    <DeleteItem id={ item.id }>Delete Item</DeleteItem>
                 </div>
             </ItemStyles>
         )
