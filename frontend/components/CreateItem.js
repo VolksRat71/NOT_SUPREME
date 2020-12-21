@@ -64,7 +64,7 @@ class CreateItem extends Component {
         return (
             <Mutation
                 mutation={CREATE_ITEM_MUTATION}
-                variables={ this.state }>
+                variables={this.state}>
                 {(createItem, { loading, error }) => (
                     <Form onSubmit={async e => {
                         e.preventDefault();
@@ -75,7 +75,7 @@ class CreateItem extends Component {
                         })
                     }}>
                         <Error error={error} />
-                        <fieldset disabled={ loading } aria-busy={ loading }>
+                        <fieldset disabled={loading} aria-busy={loading}>
                             <label htmlFor="file">
                                 Image
                                 <input
@@ -84,9 +84,9 @@ class CreateItem extends Component {
                                     name="file"
                                     placeholder="Upload an image"
                                     required
-                                    onChange={ this.uploadFile }
+                                    onChange={this.uploadFile}
                                 />
-                                {this.state.image && <img src={ this.state.image } alt="Upload Preview" />}
+                                {this.state.image && <img src={this.state.image} alt="Upload Preview" />}
                             </label>
                             <label htmlFor="title">
                                 Title
@@ -96,8 +96,8 @@ class CreateItem extends Component {
                                     name="title"
                                     placeholder="Title"
                                     required
-                                    value={ this.state.title }
-                                    onChange={ this.handleChange }
+                                    value={this.state.title}
+                                    onChange={this.handleChange}
                                 />
                             </label>
                             <label htmlFor="price">
@@ -108,8 +108,8 @@ class CreateItem extends Component {
                                     name="price"
                                     placeholder="Price"
                                     required
-                                    value={ this.state.price }
-                                    onChange={ this.handleChange }
+                                    value={this.state.price}
+                                    onChange={this.handleChange}
                                 />
                             </label>
                             <label htmlFor="description">
@@ -119,8 +119,8 @@ class CreateItem extends Component {
                                     name="description"
                                     placeholder="Enter A Description"
                                     required
-                                    value={ this.state.description }
-                                    onChange={ this.handleChange }
+                                    value={this.state.description}
+                                    onChange={this.handleChange}
                                 />
                             </label>
                             <button
