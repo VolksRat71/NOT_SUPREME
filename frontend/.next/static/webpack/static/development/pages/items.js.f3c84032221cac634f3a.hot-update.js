@@ -101,8 +101,8 @@ function (_Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_1__["Query"], {
         query: ALL_ITEMS_QUERY,
         variables: {
-          skip: 2,
-          first: 4
+          skip: this.props.page * _config__WEBPACK_IMPORTED_MODULE_6__["perPage"] - _config__WEBPACK_IMPORTED_MODULE_6__["perPage"],
+          first: _config__WEBPACK_IMPORTED_MODULE_6__["perPage"]
         },
         __source: {
           fileName: _jsxFileName,
@@ -116,21 +116,21 @@ function (_Component) {
         if (loading) return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 44
+            lineNumber: 46
           },
           __self: this
         }, "Loading...");
         if (error) return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 45
+            lineNumber: 47
           },
           __self: this
         }, "Error: ", error.message);
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ItemsList, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 47
+            lineNumber: 49
           },
           __self: this
         }, data.items.map(function (item) {
@@ -139,7 +139,7 @@ function (_Component) {
             item: item,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 49
+              lineNumber: 51
             },
             __self: this
           });
@@ -148,7 +148,7 @@ function (_Component) {
         page: this.props.page,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 57
         },
         __self: this
       }));
@@ -165,4 +165,4 @@ function (_Component) {
 /***/ })
 
 })
-//# sourceMappingURL=items.js.bb984337f052767213ca.hot-update.js.map
+//# sourceMappingURL=items.js.f3c84032221cac634f3a.hot-update.js.map
