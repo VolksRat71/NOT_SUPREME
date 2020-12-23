@@ -65,6 +65,13 @@ const Mutations = {
       maxAge: 1000 * 60 * 60 * 24 * 365, // 1 year cookie
     })
     return user;
+  },
+
+  async signIn(parent, { email, password }, ctx, info) {
+    // 1. Check if there is a user with that email
+    // 2. Check if their password is correct
+    // 3. Generate the JWT
+    // 4. Sign in
   }
 };
 
