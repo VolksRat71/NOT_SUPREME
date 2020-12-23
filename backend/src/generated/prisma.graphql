@@ -1,5 +1,5 @@
 # source: https://us1.prisma.sh/nate-ryan-395598/NotSupreme/dev
-# timestamp: Mon Dec 21 2020 19:59:41 GMT-0600 (Central Standard Time)
+# timestamp: Tue Dec 22 2020 21:45:04 GMT-0600 (Central Standard Time)
 
 type AggregateItem {
   count: Int!
@@ -836,4 +836,5 @@ input UserWhereInput {
 
 input UserWhereUniqueInput {
   id: ID
+  email: String
 }
