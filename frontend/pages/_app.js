@@ -18,9 +18,9 @@ class MyApp extends App {
 
         return (
             <Container>
-                <ApolloProvider client={ apollo }>
+                <ApolloProvider client={apollo}>
                     <Page>
-                        <Component { ...pageProps } />
+                        <Component {...pageProps} />
                     </Page>
                 </ApolloProvider>
             </Container>
