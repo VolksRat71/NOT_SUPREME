@@ -20,9 +20,9 @@ const SIGNUP_MUTATION = gql`
 
 class SignUp extends Component {
     state = {
-        name: "",
-        password: "",
-        email: ""
+        name: '',
+        password: '',
+        email: ''
     }
 
     saveToState = e => {
@@ -45,9 +45,9 @@ class SignUp extends Component {
                                 e.preventDefault();
                                 const res = await signUp();
                                 this.setState({
-                                    name: "",
-                                    password: "",
-                                    email: ""
+                                    name: '',
+                                    password: '',
+                                    email: ''
                                 })
                             }}>
                             <fieldset disabled={loading} aria-busy={loading}>
@@ -58,7 +58,7 @@ class SignUp extends Component {
                                 <input
                                         type="email"
                                         name="email"
-                                        placeholder="email"
+                                        placeholder="Email"
                                         value={this.state.email}
                                         onChange={this.saveToState} />
                                 </label>
@@ -67,7 +67,7 @@ class SignUp extends Component {
                                 <input
                                         type="text"
                                         name="name"
-                                        placeholder="name"
+                                        placeholder="Name"
                                         value={this.state.name}
                                         onChange={this.saveToState} />
                                 </label>
@@ -76,7 +76,7 @@ class SignUp extends Component {
                                 <input
                                         type="password"
                                         name="password"
-                                        placeholder="password"
+                                        placeholder="Password"
                                         value={this.state.password}
                                         onChange={this.saveToState} />
                                 </label>

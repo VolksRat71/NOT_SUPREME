@@ -1,26 +1,36 @@
 import React, { Component } from 'react';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
+import PropTypes from 'prop-types';
 import Form from './styles/Form';
 import Error from './ErrorMessage';
 import { CURRENT_USER_QUERY } from './User';
 
-const SIGNIN_MUTATION = gql`
-    mutation SIGNIN_MUTATION (
-        $email: String!, $password: String!
+const RESET_MUTATION = gql`
+    mutation RESET_MUTATION (
+        $resetToken: String!,
+        $password: String!,
+        $confirmPassword: String!
     ) {
-  signIn(email: $email, password: $password) {
-    id
-    email
-    name
-  }
+    resetPassword(
+        resetToken: $resetToken,
+        password: $password,
+        confirmPassword: $confirmPassword) {
+            id
+            email
+            name
+    }
 }
 `
 
-class SignIn extends Component {
+class ResetPassword extends Component {
+    static propsTypes = {
+        resetToken: PropTypes.string.isRequired
+    }
+
     state = {
         password: '',
-        email: ''
+        confirmPassword: ''
     }
 
     saveToState = e => {
@@ -30,35 +40,30 @@ class SignIn extends Component {
     render() {
         return (
             <Mutation
-                mutation={SIGNIN_MUTATION}
-                variables={this.state}
+                mutation={RESET_MUTATION}
+                variables={{
+                    resetToken: this.props.resetToken,
+                    password: this.state.password,
+                    confirmPassword: this.state.confirmPassword
+                }}
                 refetchQueries={
                     [{ query: CURRENT_USER_QUERY }]
                 }>
-                {(signIn, { error, loading }) => {
+                {(reset, { error, loading, called }) => {
                     return (
                         <Form
                             method="post"
                             onSubmit={async e => {
                                 e.preventDefault();
-                                const res = await signIn();
+                                await reset();
                                 this.setState({
                                     password: '',
-                                    email: ''
+                                    confirmPassword: ''
                                 })
                             }}>
                             <fieldset disabled={loading} aria-busy={loading}>
-                                <h2>Sign in to your Account</h2>
+                                <h2>Reset your password</h2>
                                 <Error error={error} />
-                                <label htmlFor="email">
-                                    Email
-                                <input
-                                        type="email"
-                                        name="email"
-                                        placeholder="Email"
-                                        value={this.state.email}
-                                        onChange={this.saveToState} />
-                                </label>
                                 <label htmlFor="password">
                                     Password
                                 <input
@@ -68,7 +73,16 @@ class SignIn extends Component {
                                         value={this.state.password}
                                         onChange={this.saveToState} />
                                 </label>
-                                <button type="submit">Sign In</button>
+                                <label htmlFor="confirmPassword">
+                                    Confirm Your Password
+                                <input
+                                        type="password"
+                                        name="confirmPassword"
+                                        placeholder="Confirm Password"
+                                        value={this.state.confirmPassword}
+                                        onChange={this.saveToState} />
+                                </label>
+                                <button type="submit">Reset Password</button>
                             </fieldset>
                         </Form>
                     )
@@ -78,4 +92,4 @@ class SignIn extends Component {
     }
 }
 
-export default SignIn;
+export default ResetPassword;

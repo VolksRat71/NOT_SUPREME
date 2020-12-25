@@ -3,23 +3,19 @@ import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 import Form from './styles/Form';
 import Error from './ErrorMessage';
-import { CURRENT_USER_QUERY } from './User';
 
-const SIGNIN_MUTATION = gql`
-    mutation SIGNIN_MUTATION (
-        $email: String!, $password: String!
+const REQUEST_RESET_MUTATION = gql`
+    mutation REQUEST_RESET_MUTATION (
+        $email: String!
     ) {
-  signIn(email: $email, password: $password) {
-    id
-    email
-    name
+    requestReset(email: $email) {
+    message
   }
 }
 `
 
-class SignIn extends Component {
+class RequestReset extends Component {
     state = {
-        password: '',
         email: ''
     }
 
@@ -30,26 +26,23 @@ class SignIn extends Component {
     render() {
         return (
             <Mutation
-                mutation={SIGNIN_MUTATION}
-                variables={this.state}
-                refetchQueries={
-                    [{ query: CURRENT_USER_QUERY }]
-                }>
-                {(signIn, { error, loading }) => {
+                mutation={REQUEST_RESET_MUTATION}
+                variables={this.state}>
+                {(reset, { error, loading, called }) => {
                     return (
                         <Form
                             method="post"
                             onSubmit={async e => {
                                 e.preventDefault();
-                                const res = await signIn();
+                                const success = await reset();
                                 this.setState({
-                                    password: '',
-                                    email: ''
+                                    email: ""
                                 })
                             }}>
                             <fieldset disabled={loading} aria-busy={loading}>
-                                <h2>Sign in to your Account</h2>
+                                <h2>Request a password reset</h2>
                                 <Error error={error} />
+                                {!error && !loading && called && <p>Success! Check your email for reset link.</p>}
                                 <label htmlFor="email">
                                     Email
                                 <input
@@ -59,16 +52,7 @@ class SignIn extends Component {
                                         value={this.state.email}
                                         onChange={this.saveToState} />
                                 </label>
-                                <label htmlFor="password">
-                                    Password
-                                <input
-                                        type="password"
-                                        name="password"
-                                        placeholder="Password"
-                                        value={this.state.password}
-                                        onChange={this.saveToState} />
-                                </label>
-                                <button type="submit">Sign In</button>
+                                <button type="submit">Request Reset</button>
                             </fieldset>
                         </Form>
                     )
@@ -78,4 +62,4 @@ class SignIn extends Component {
     }
 }
 
-export default SignIn;
+export default RequestReset;

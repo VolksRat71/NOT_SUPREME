@@ -113,8 +113,7 @@ const Mutations = {
     const res = await ctx.db.mutation.updateUser({
       where: { email: args.email },
       data: { resetToken, resetTokenExpiry }
-    })
-    console.log(res);
+    });
     return { message: 'password reset!' }
     // Email them that reset reset token
   },
