@@ -206,7 +206,9 @@ function (_Component) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           onClick: function onClick() {
             if (confirm('Are you sure you want to delete this item?')) {
-              deleteItem();
+              deleteItem().catch(function (err) {
+                alert(err.message);
+              });
             }
           },
           __source: {
