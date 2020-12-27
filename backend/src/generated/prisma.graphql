@@ -1,5 +1,5 @@
 # source: https://us1.prisma.sh/nate-ryan-395598/NotSupreme/dev
-# timestamp: Sat Dec 26 2020 15:50:22 GMT-0600 (Central Standard Time)
+# timestamp: Sat Dec 26 2020 21:54:22 GMT-0600 (Central Standard Time)
 
 type AggregateItem {
   count: Int!
@@ -23,8 +23,8 @@ type Item implements Node {
   image: String
   largeImage: String
   price: Int!
-  user: User!
   createdAt: DateTime!
+  user: User!
 }
 
 """A connection to a list of items."""

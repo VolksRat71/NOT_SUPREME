@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const { randomBytes } = require('crypto');
 const { promisify } = require('util');
 const { transport, makeANiceEmail } = require('../mail');
+const { hasPermission } = require('../utils');
 
 const Mutations = {
   async createItem(parent, args, ctx, info) {
@@ -125,7 +126,7 @@ const Mutations = {
     });
     // Email them that reset reset token
     const mailRes = await transport.sendMail({
-      from: 'Customer_Support@NotSupreme.store',
+      from: 'nathanieljryan1994@gmail.com',
       to: user.email,
       subject: 'Password Reset',
       html: makeANiceEmail(`Here is the password reset link that you requested!
@@ -175,6 +176,33 @@ const Mutations = {
     })
     // return user
     return updatedUser;
+  },
+
+  async updatePermissions(parent, args, ctx, info) {
+    // Check if they are logged in
+    if (!ctx.request.userId) {
+      throw new Error('You must be logged in.')
+    }
+    // Query current user
+    const currentUser = await ctx.db.query.user({
+      where: {
+        id: ctx.request.userId
+      }
+    }, info)
+    // Check if they have permission to make changes
+    hasPermission(currentUser, ['ADMIN', 'PERMISSIONUPDATE'])
+
+    // Update Permissions
+    return ctx.db.mutation.updateUser({
+      data: {
+        permissions: {
+          set: args.permissions
+        }
+      },
+      where: {
+        id: args.userId
+      }
+    }, info)
   }
 };
 
