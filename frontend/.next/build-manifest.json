@@ -11,11 +11,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/items": [
+    "/item": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/permissions": [
+    "/items": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

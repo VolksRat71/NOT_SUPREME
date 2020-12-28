@@ -924,7 +924,7 @@ function createClient(_ref) {
         }
       },
       defaults: {
-        cartOpen: true
+        cartOpen: false
       }
     }
   });
