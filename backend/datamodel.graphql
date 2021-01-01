@@ -35,7 +35,7 @@ type Item {
 type CartItem {
 	id: ID! @id @unique
 	quantity: Int! @default(value: 1)
-	item: Item!
+	item: Item
 	user: User!
 	createdAt: DateTime! @createdAt
 	updatedAt: DateTime! @updatedAt
