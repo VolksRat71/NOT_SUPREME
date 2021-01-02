@@ -58,7 +58,7 @@ type Order {
 	id: ID! @id @unique
 	items: [OrderItem!]!
 	total: Int!
-	user: Int!
+	user: User!
 	charge: String!
 	createdAt: DateTime! @createdAt
 	updatedAt: DateTime! @updatedAt

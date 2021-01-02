@@ -1,5 +1,5 @@
 # source: https://us1.prisma.sh/nate-ryan-395598/NotSupreme/dev
-# timestamp: Fri Jan 01 2021 21:05:52 GMT-0600 (Central Standard Time)
+# timestamp: Sat Jan 02 2021 12:55:27 GMT-0600 (Central Standard Time)
 
 type AggregateCartItem {
   count: Int!
@@ -910,7 +910,7 @@ type Order implements Node {
   id: ID!
   items(where: OrderItemWhereInput, orderBy: OrderItemOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [OrderItem!]
   total: Int!
-  user: Int!
+  user: User!
   charge: String!
   createdAt: DateTime!
   updatedAt: DateTime!
@@ -929,9 +929,9 @@ type OrderConnection {
 input OrderCreateInput {
   id: ID
   total: Int!
-  user: Int!
   charge: String!
   items: OrderItemCreateManyInput
+  user: UserCreateOneInput!
 }
 
 """An edge in a connection."""
@@ -1737,8 +1737,6 @@ enum OrderOrderByInput {
   id_DESC
   total_ASC
   total_DESC
-  user_ASC
-  user_DESC
   charge_ASC
   charge_DESC
   createdAt_ASC
@@ -1750,7 +1748,6 @@ enum OrderOrderByInput {
 type OrderPreviousValues {
   id: ID!
   total: Int!
-  user: Int!
   charge: String!
   createdAt: DateTime!
   updatedAt: DateTime!
@@ -1797,14 +1794,13 @@ input OrderSubscriptionWhereInput {
 
 input OrderUpdateInput {
   total: Int
-  user: Int
   charge: String
   items: OrderItemUpdateManyInput
+  user: UserUpdateOneRequiredInput
 }
 
 input OrderUpdateManyMutationInput {
   total: Int
-  user: Int
   charge: String
 }
 
@@ -1879,28 +1875,6 @@ input OrderWhereInput {
 
   """All values greater than or equal the given value."""
   total_gte: Int
-  user: Int
-
-  """All values that are not equal to given value."""
-  user_not: Int
-
-  """All values that are contained in given list."""
-  user_in: [Int!]
-
-  """All values that are not contained in given list."""
-  user_not_in: [Int!]
-
-  """All values less than the given value."""
-  user_lt: Int
-
-  """All values less than or equal the given value."""
-  user_lte: Int
-
-  """All values greater than the given value."""
-  user_gt: Int
-
-  """All values greater than or equal the given value."""
-  user_gte: Int
   charge: String
 
   """All values that are not equal to given value."""
@@ -1988,6 +1962,7 @@ input OrderWhereInput {
   items_every: OrderItemWhereInput
   items_some: OrderItemWhereInput
   items_none: OrderItemWhereInput
+  user: UserWhereInput
 }
 
 input OrderWhereUniqueInput {
