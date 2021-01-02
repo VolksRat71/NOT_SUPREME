@@ -48,7 +48,7 @@ const Cart = () => (
                         {me.cart.map(cartItem => <CartItem key={cartItem.id} cartItem={cartItem} />)}
                     </ul>
                     <footer>
-                        {me.cart.length > 0 &&
+                        {me.cart.length &&
                             <>
                                 <p>{formatMoney(calcTotalPrice(me.cart))}</p>
                                 <TakeMyMoney>

@@ -265,7 +265,7 @@ var Cart = function Cart() {
         lineNumber: 50
       },
       __self: this
-    }, me.cart.length > 0 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, me.cart.length && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 53
@@ -1639,10 +1639,9 @@ function (_Component) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                console.log('On Token Called');
-                console.log(res.id); // Manually call the mutation once we have the strip token
+                nprogress__WEBPACK_IMPORTED_MODULE_5___default.a.start(); // Manually call the mutation once we have the strip token
 
-                _context.next = 4;
+                _context.next = 3;
                 return createOrder({
                   variables: {
                     token: res.id
@@ -1651,9 +1650,15 @@ function (_Component) {
                   alert(err.message);
                 });
 
-              case 4:
+              case 3:
                 order = _context.sent;
-                console.log(order);
+                next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push({
+                  pathname: '/orders',
+                  query: {
+                    id: order.data.createOrder.id
+                  }
+                });
+                nprogress__WEBPACK_IMPORTED_MODULE_5___default.a.done();
 
               case 6:
               case "end":
@@ -1679,7 +1684,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 51
         },
         __self: this
       }, function (_ref2) {
@@ -1691,7 +1696,7 @@ function (_Component) {
           }],
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 50
+            lineNumber: 53
           },
           __self: this
         }, function (createOrder) {
@@ -1708,7 +1713,7 @@ function (_Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 56
+              lineNumber: 59
             },
             __self: this
           }, _this2.props.children);
