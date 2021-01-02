@@ -27,11 +27,6 @@ const Nav = props => (
                                 <p>Orders</p>
                             </a>
                         </Link>
-                        <Link href="/me">
-                            <a>
-                                <p>Account</p>
-                            </a>
-                        </Link>
                         <SignOut />
                         <Mutation mutation={TOGGLE_CART_MUTATION}>
                             {toggleCart => (
