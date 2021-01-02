@@ -40,3 +40,26 @@ type CartItem {
 	createdAt: DateTime! @createdAt
 	updatedAt: DateTime! @updatedAt
 }
+
+type OrderItem {
+	id: ID! @id @unique
+	title: String!
+	description: String!
+	image: String!
+	largeImage: String!
+	price: Int!
+	quantity: Int! @default(value: 1)
+	user: User
+	createdAt: DateTime! @createdAt
+	updatedAt: DateTime! @updatedAt
+}
+
+type Order {
+	id: ID! @id @unique
+	items: [OrderItem!]!
+	total: Int!
+	user: Int!
+	charge: String!
+	createdAt: DateTime! @createdAt
+	updatedAt: DateTime! @updatedAt
+}
