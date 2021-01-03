@@ -7,7 +7,7 @@
     "dev": "next -p 7777",
     "build": "next build",
     "start": "next start",
-    "test": "NODE_ENV=test jest --watch",
+    "test-ios": "NODE_ENV=test jest --watch",
     "test-win": "SET NODE_ENV=test&& jest --watch",
     "heroku-postbuild": "next build"
   },
@@ -59,7 +59,6 @@
       "^.+\\.js?$": "babel-jest"
     }
   },
-  "//": "This is our babel config, I prefer this over a .babelrc file",
   "babel": {
     "env": {
       "development": {

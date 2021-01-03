@@ -60,7 +60,7 @@ const Header = props => (
     <StyledHeader>
         <div className="bar">
             <Logo>
-                <Link href="/">
+                <Link href="/items">
                     <a>Not Supreme</a>
                 </Link>
             </Logo>
