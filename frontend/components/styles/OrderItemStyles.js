@@ -5,6 +5,7 @@ const OrderItemStyles = styled.li`
   list-style: none;
   padding: 2rem;
   border: 1px solid ${props => props.theme.offWhite};
+  border-top: 10px solid red;
   h2 {
     border-bottom: 2px solid red;
     margin-top: 0;

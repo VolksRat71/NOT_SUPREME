@@ -1,10 +1,10 @@
 import PleaseSignIn from '../components/PleaseSignIn';
-import OrderList from '../components/OrderList';
+import Order from '../components/Order';
 
 const OrdersPage = props => (
     <>
         <PleaseSignIn>
-            <OrderList />
+            <Order id={props.query.id} />
         </PleaseSignIn>
     </>
 );

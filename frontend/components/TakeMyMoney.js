@@ -39,7 +39,7 @@ class TakeMyMoney extends Component {
             alert(err.message)
         })
         Router.push({
-            pathname: '/orders',
+            pathname: '/order',
             query: { id: order.data.createOrder.id }
         })
         NProgress.done()

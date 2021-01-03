@@ -1552,7 +1552,7 @@ function (_Component) {
               case 3:
                 order = _context.sent;
                 next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push({
-                  pathname: '/orders',
+                  pathname: '/order',
                   query: {
                     id: order.data.createOrder.id
                   }
