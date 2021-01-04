@@ -8,7 +8,7 @@ Person.prototype.fetchFavFoods = function () {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(this.foods)
-        }, 2000
+        }, 200
         )
     })
 }
@@ -32,9 +32,6 @@ describe('mocking learning ', () => {
     it('Can fetch foods ', async () => {
         const me = new Person('Wilber', ['Hod Dogs', 'Hamburgers', 'Sushi']);
         const favFoods = await me.fetchFavFoods();
-        console.log(favFoods);
         expect(favFoods).toContain('Sushi')
     })
-
-
 })
