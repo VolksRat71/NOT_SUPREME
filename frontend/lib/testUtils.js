@@ -5,7 +5,7 @@ casual.seed(777);
 
 const fakeItem = () => ({
   __typename: 'Item',
-  id: 'abc123',
+  id: '123',
   price: 5000,
   user: null,
   image: 'dog-small.jpg',

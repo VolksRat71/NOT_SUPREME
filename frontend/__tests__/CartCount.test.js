@@ -10,7 +10,7 @@ describe('<CartCount />', () => {
     it('Matches the snapshot ', () => {
         const wrapper = shallow(<CartCount count={10} />)
         expect(toJSON(wrapper)).toMatchSnapshot()
-    })
+    });
 
     it('Updates via props ', () => {
         const wrapper = shallow(<CartCount count={50} />)
@@ -21,7 +21,7 @@ describe('<CartCount />', () => {
         });
 
         expect(toJSON(wrapper)).toMatchSnapshot();
-    })
+    });
 
 })
 
