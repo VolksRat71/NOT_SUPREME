@@ -1,9 +1,8 @@
 import { mount } from 'enzyme';
-import toJSON from 'enzyme-to-json';
 import wait from 'waait';
-import SingleItem, { SINGLE_ITEM_QUERY } from '../components/SingleItem';
 import { MockedProvider } from 'react-apollo/test-utils';
 import { fakeItem } from '../lib/testUtils';
+import SingleItem, { SINGLE_ITEM_QUERY } from '../components/SingleItem';
 
 describe('<SingleItem /> ', () => {
     it('renders with proper data', async () => {
@@ -28,7 +27,8 @@ describe('<SingleItem /> ', () => {
         expect(wrapper.text()).toContain('Loading...');
         await wait();
         wrapper.update();
-        console.log(wrapper.debug());
+        // TODO: How are we able to query items everywhere but here?
+        // console.log(wrapper.debug())
     })
 })
 

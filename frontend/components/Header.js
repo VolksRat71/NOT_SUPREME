@@ -60,7 +60,9 @@ const Header = props => (
     <StyledHeader>
         <div className="bar">
             <Logo>
-                <Link href="/items">
+                <Link href={{
+                    pathname: '/'
+                }}>
                     <a>Not Supreme</a>
                 </Link>
             </Logo>

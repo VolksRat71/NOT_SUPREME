@@ -13,7 +13,7 @@ const mockItem = {
 
 describe('<Item />', () => {
 
-    it('Renders and matched the snapshot ', () => {
+    test('Renders and matched the snapshot ', () => {
         const wrapper = shallow(<ItemComponent item={mockItem} />);
         expect(toJSON(wrapper)).toMatchSnapshot();
     })

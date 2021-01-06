@@ -1,9 +1,9 @@
 import { mount } from 'enzyme';
 import wait from 'waait';
-import PleaseSignIn from '../components/PleaseSignIn';
-import { CURRENT_USER_QUERY } from '../components/User';
 import { MockedProvider } from 'react-apollo/test-utils';
 import { fakeUser } from '../lib/testUtils';
+import PleaseSignIn from '../components/PleaseSignIn';
+import { CURRENT_USER_QUERY } from '../components/User';
 
 const notSignedInMocks = [
     {
@@ -20,7 +20,7 @@ const signedInMocks = [
 ];
 
 describe('<PleaseSignIn/>', () => {
-    it('renders the sign in dialog to logged out users', async () => {
+    test('Renders the sign in dialog to logged out users', async () => {
         const wrapper = mount(
             <MockedProvider mocks={notSignedInMocks}>
                 <PleaseSignIn />
@@ -28,9 +28,12 @@ describe('<PleaseSignIn/>', () => {
         );
 
         expect(wrapper.find('PleaseSignIn').exists()).toBeTruthy()
+        await wait()
+        wrapper.update()
+        expect(wrapper.find('p').text()).toBe('Please Sign In before continuing.')
     });
 
-    it('renders the child component when the user is signed in', async () => {
+    test('Renders the child component when the user is signed in', async () => {
         const Hey = () => <p>Hey!</p>;
         const wrapper = mount(
             <MockedProvider mocks={signedInMocks}>
@@ -39,8 +42,9 @@ describe('<PleaseSignIn/>', () => {
                 </PleaseSignIn>
             </MockedProvider>
         );
-
-
         expect(wrapper.find('p').text()).toBe('Loading...')
+        await wait()
+        wrapper.update()
+        expect(wrapper.find('p').text()).toBe('Hey!')
     });
 });

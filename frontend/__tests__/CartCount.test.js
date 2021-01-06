@@ -3,16 +3,16 @@ import toJSON from 'enzyme-to-json';
 import CartCount from '../components/CartCount';
 
 describe('<CartCount />', () => {
-    it('Renders ', () => {
+    test('Renders ', () => {
         shallow(<CartCount count={10} />)
     });
 
-    it('Matches the snapshot ', () => {
+    test('Matches the snapshot ', () => {
         const wrapper = shallow(<CartCount count={10} />)
         expect(toJSON(wrapper)).toMatchSnapshot()
     });
 
-    it('Updates via props ', () => {
+    test('Updates via props ', () => {
         const wrapper = shallow(<CartCount count={50} />)
         expect(toJSON(wrapper)).toMatchSnapshot();
 

@@ -15,7 +15,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/order": [
+    "/index": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

@@ -544,7 +544,9 @@ var Header = function Header(props) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/items",
+    href: {
+      pathname: '/'
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 63
@@ -553,32 +555,32 @@ var Header = function Header(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 66
     },
     __self: this
   }, "Not Supreme"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 69
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "sub-bar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 71
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 72
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cart__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 74
     },
     __self: this
   }));
@@ -697,6 +699,7 @@ var Nav = function Nav(props) {
   }, function (_ref) {
     var me = _ref.data.me;
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      "data-test": "nav",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 12
