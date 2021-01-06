@@ -150,7 +150,6 @@ const Mutations = {
     if (args.password !== args.confirmPassword) {
       throw new Error('Passwords do not match!')
     }
-    //TODO: Check if token is legit
 
     // Check if its expired
     const [user] = await ctx.db.query.users({

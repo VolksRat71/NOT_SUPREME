@@ -54,7 +54,7 @@ describe('<Nav />', () => {
         expect(toJSON(nav)).toMatchSnapshot()
     })
 
-    test('Renders a full <Nav /> when signed in ', async () => {
+    xtest('Renders a full <Nav /> when signed in ', async () => {
         const wrapper = mount(
             <MockedProvider mocks={signedInMocks}>
                 <Nav />
