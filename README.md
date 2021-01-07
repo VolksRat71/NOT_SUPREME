@@ -1,4 +1,4 @@
-## <p align="center" >  <a href="#about"><img height="20px" src="./test_images/Nav/About.jpg"/></a>  <a href="#usage"><img height="20px" src="./test_images/Nav/Usage.jpg"/></a> <img height="20px" src="./test_images/Nav/The_Server.jpg"/> <img height="20px" src="./test_images/Nav/The_Client.jpg"/> <img height="20px" src="./test_images/Nav/Contact_Me.jpg"/>
+## <p align="center" >  <a href="#about"><img height="20px" src="./test_images/Nav/About.jpg"/></a>  <a href="#usage"><img height="20px" src="./test_images/Nav/Usage.jpg"/></a> <a onclick="alert('That does work yet!')"><img height="20px" src="./test_images/Nav/The_Server.jpg"/></a> <a onclick="alert('That does work yet!')"><img height="20px" src="./test_images/Nav/The_Client.jpg"/></a> <a href="mailto:nathanieljryan1994@gmail.com"><img height="20px" src="./test_images/Nav/Contact_Me.jpg"/></a>
 
 <p align="center" >
     <img width="45%" src="./test_images/Gifs/RunThru.gif"/>
