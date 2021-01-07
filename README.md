@@ -1,4 +1,10 @@
-## <p align="center" >  <img height="20px" src="./test_images/About.jpg"/>  <img height="20px" src="./test_images/Usage.jpg"/> <img height="20px" src="./test_images/The_Server.jpg"/> <img height="20px" src="./test_images/The_Client.jpg"/> <img height="20px" src="./test_images/Contact_Me.jpg"/>
+## <p align="center" >  <img height="20px" src="./test_images/Nav/About.jpg"/>  <img height="20px" src="./test_images/Nav/Usage.jpg"/> <img height="20px" src="./test_images/Nav/The_Server.jpg"/> <img height="20px" src="./test_images/Nav/The_Client.jpg"/> <img height="20px" src="./test_images/Nav/Contact_Me.jpg"/>
+
+<p align="center" >
+    <img width="45%" src="./test_images/Gifs/RunThru.gif"/>
+    <img width="45%" src="./test_images/Gifs/mobile.gif"/>
+</p>
+
 ___
 <p align="center">
  <img height="50px" src="./test_images/About.jpg"/>
@@ -19,6 +25,34 @@ If you would like to explore our source code, please direct yourself to our [Git
 👉🏽 __** DISCLAIMER **__ 👈🏽
 
 This is an independent project built by Nathaniel Ryan for the means of adding to a portfolio. This application **IS NOT** for sale. If you'd like to talk about employment opportunities or contract work please email [nathanieljryan1994@gmail.com](mailto:nathanieljryan1994@gmail.com).
+___
+
+
+<p align="center">
+ <img height="50px" src="./test_images/Nav/Usage.jpg"/>
+</p>
+
+## Orders
+
+Find your Recent orders in one spot!
+<p align="center" >
+    <img width="75%" src="./test_images/Gifs/Orders.gif"/>
+</p>
 
 ___
 
+## Password Reset
+
+Emailed Password Resets
+<p align="center" >
+    <img width="75%" src="./test_images/Gifs/PassReset.gif"/>
+</p>
+
+___
+
+## Permission Update
+
+With Administrative privilages, you can easy control user permissions.
+<p align="center" >
+    <img width="75%" src="./test_images/Gifs/Permissions.gif"/>
+</p>
