@@ -1,4 +1,4 @@
-## <p align="center" >  <img height="20px" src="./test_images/Nav/About.jpg"/>  <img height="20px" src="./test_images/Nav/Usage.jpg"/> <img height="20px" src="./test_images/Nav/The_Server.jpg"/> <img height="20px" src="./test_images/Nav/The_Client.jpg"/> <img height="20px" src="./test_images/Nav/Contact_Me.jpg"/>
+## <p align="center" >  <a href="#about"><img height="20px" src="./test_images/Nav/About.jpg"/></a>  <a href="#usage"><img height="20px" src="./test_images/Nav/Usage.jpg"/></a> <img height="20px" src="./test_images/Nav/The_Server.jpg"/> <img height="20px" src="./test_images/Nav/The_Client.jpg"/> <img height="20px" src="./test_images/Nav/Contact_Me.jpg"/>
 
 <p align="center" >
     <img width="45%" src="./test_images/Gifs/RunThru.gif"/>
@@ -6,8 +6,8 @@
 </p>
 
 ___
-<p align="center">
-<img height="50px" src="./test_images/Nav/About.jpg"/>
+<p align="center" id="about">
+    <img height="50px" src="./test_images/Nav/About.jpg"/>
 </p>
 
 **The application is designed with the user in mind**, with snappy transitions, animation, and constant feedback, you can be sure that the user will enjoy every transaction on our platform.
@@ -28,7 +28,7 @@ This is an independent project built by Nathaniel Ryan for the means of adding t
 ___
 
 
-<p align="center">
+<p align="center" id="usage">
  <img height="50px" src="./test_images/Nav/Usage.jpg"/>
 </p>
 
