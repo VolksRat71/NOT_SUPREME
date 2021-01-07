@@ -2,7 +2,7 @@
 
 <p align="center" >
     <img width="45%" src="./test_images/Gifs/RunThru.gif"/>
-    <img width="45%" src="./test_images/Gifs/mobile.gif"/>
+    <img width="45%" src="./test_images/Gifs/Mobile.gif"/>
 </p>
 
 ___
