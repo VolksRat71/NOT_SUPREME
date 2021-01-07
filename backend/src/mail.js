@@ -17,6 +17,9 @@ const makeANiceEmail = text => `
         line-height: 2;
         font-size: 20px
     ">
+        <p align="center">
+            <img height="70px" src="https://raw.githubusercontent.com/VolksRat71/NOT_SUPREME/master/test_images/NotSupreme.png"/>
+        </p>
         <h1>Hello There,</h1>
         <p>${text}</p>
 
