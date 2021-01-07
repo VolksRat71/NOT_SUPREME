@@ -7,7 +7,7 @@
 
 ___
 <p align="center">
- <img height="50px" src="./test_images/About.jpg"/>
+<img height="50px" src="./test_images/Nav/About.jpg"/>
 </p>
 
 **The application is designed with the user in mind**, with snappy transitions, animation, and constant feedback, you can be sure that the user will enjoy every transaction on our platform.
