@@ -65,7 +65,9 @@ class TakeMyMoney extends Component {
                                 currency="USD"
                                 email={me.email}
                                 token={res => this.onToken(res, createOrder)}
-                            >{this.props.children}</StripeCheckout>
+                            >
+                                {this.props.children}
+                            </StripeCheckout>
                         )}</Mutation>
                     )}
                 </User>

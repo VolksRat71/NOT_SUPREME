@@ -44,7 +44,6 @@ class SingleItem extends Component {
                 {({ error, loading, data }) => {
                     if (error) return <Error error={error} />
                     if (loading) return <p>Loading...</p>
-                    console.table(data)
                     const item = data.item;
                     return (
                         <SingleItemStyles>
@@ -65,3 +64,4 @@ class SingleItem extends Component {
 }
 
 export default SingleItem;
+export { SINGLE_ITEM_QUERY };

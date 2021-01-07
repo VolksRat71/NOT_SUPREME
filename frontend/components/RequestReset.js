@@ -31,10 +31,11 @@ class RequestReset extends Component {
                 {(reset, { error, loading, called }) => {
                     return (
                         <Form
+                            data-test="form"
                             method="post"
                             onSubmit={async e => {
                                 e.preventDefault();
-                                const success = await reset();
+                                await reset();
                                 this.setState({
                                     email: ""
                                 })
@@ -50,7 +51,8 @@ class RequestReset extends Component {
                                         name="email"
                                         placeholder="Email"
                                         value={this.state.email}
-                                        onChange={this.saveToState} />
+                                        onChange={this.saveToState}
+                                    />
                                 </label>
                                 <button type="submit">Request Reset</button>
                             </fieldset>
@@ -63,3 +65,4 @@ class RequestReset extends Component {
 }
 
 export default RequestReset;
+export { REQUEST_RESET_MUTATION };
