@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignUp /> Renders and matches snapshot  1`] = `
+<form
+  className="Form-sc-17mrryo-0 kCLdEE"
+  method="post"
+  onSubmit={[Function]}
+>
+  <fieldset
+    aria-busy={false}
+    disabled={false}
+  >
+    <h2>
+      Sign Up for an Account
+    </h2>
+    <DisplayError
+      error={Object {}}
+    />
+    <label
+      htmlFor="email"
+    >
+      Email
+      <input
+        name="email"
+        onChange={[Function]}
+        placeholder="Email"
+        type="email"
+        value=""
+      />
+    </label>
+    <label
+      htmlFor="name"
+    >
+      Name
+      <input
+        name="name"
+        onChange={[Function]}
+        placeholder="Name"
+        type="text"
+        value=""
+      />
+    </label>
+    <label
+      htmlFor="password"
+    >
+      Password
+      <input
+        name="password"
+        onChange={[Function]}
+        placeholder="Password"
+        type="password"
+        value=""
+      />
+    </label>
+    <button
+      type="submit"
+    >
+      Sign Up
+    </button>
+  </fieldset>
+</form>
+`;
