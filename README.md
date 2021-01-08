@@ -1,4 +1,20 @@
-## <p align="center" >  <a href="#about"><img height="40px" src="./test_images/Nav/About.png"/></a>  <a href="#usage"><img height="40px" src="./test_images/Nav/Usage.png"/></a> <a onclick="alert('That does work yet!')"><img height="40px" src="./test_images/Nav/The_Server.png"/></a> <a onclick="alert('That does work yet!')"><img height="40px" src="./test_images/Nav/The_Client.png"/></a> <a href="mailto:nathanieljryan1994@gmail.com"><img height="40px" src="./test_images/Nav/Contact_Me.png"/></a>
+<p align="center" id="top">
+    <a href="#about">
+        <img height="40px" src="./test_images/Nav/About.png"/>
+    </a>
+    <a href="#usage">
+        <img height="40px" src="./test_images/Nav/Usage.png"/>
+    </a>
+    <a onclick="alert('That does work yet!')">
+        <img height="40px" src="./test_images/Nav/The_Server.png"/>
+    </a>
+    <a onclick="alert('That does work yet!')">
+        <img height="40px" src="./test_images/Nav/The_Client.png"/>
+    </a>
+    <a href="mailto:nathanieljryan1994@gmail.com">
+        <img height="40px" src="./test_images/Nav/Contact_Me.png"/>
+    </a>
+</p>
 
 <p align="center" style="background: #000000; border-radius: 20px; padding: 20px">
     <img width="45%" src="./test_images/Gifs/RunThru.gif"/>
@@ -8,6 +24,7 @@
 ___
 <p align="center" id="about">
     <img height="50px" src="./test_images/Nav/About.png"/>
+    <a href="#top">top ⤴</a>
 </p>
 
 **The application is designed with the user in mind**, with snappy transitions, animation, and constant feedback, you can be sure that the user will enjoy every transaction on our platform.
@@ -30,29 +47,35 @@ ___
 
 <p align="center" id="usage">
  <img height="50px" src="./test_images/Nav/Usage.png"/>
+ <a href="#top">top ⤴</a>
 </p>
 
 
-<img width="60%" align="left" src="./test_images/Gifs/Orders.gif"/>
+<p align="center">
+<img width="60%"  src="./test_images/Gifs/Orders.gif"/>
+</p>
 
-## Orders
+##  Orders
 
+View your orders on an easy to use and easy to access page right from the navigation bar. There you will see past order where if you click on them will re route you to a page including details about the order.
 
 
 ___
+
+<p align="center" >
+    <img width="60%" src="./test_images/Gifs/PassReset.gif"/>
+</p>
 
 ## Password Reset
 
-Emailed Password Resets
-<p align="center" >
-    <img width="75%" src="./test_images/Gifs/PassReset.gif"/>
-</p>
+View your orders on an easy to use and easy to access page right from the navigation bar. There you will see past order where if you click on them will re route you to a page including details about the order.
 
 ___
 
-## Permission Update
-
-With Administrative privilages, you can easy control user permissions.
 <p align="center" >
-    <img width="75%" src="./test_images/Gifs/Permissions.gif"/>
+    <img width="60%" src="./test_images/Gifs/Permissions.gif"/>
 </p>
+
+## Manage Permissions
+
+View your orders on an easy to use and easy to access page right from the navigation bar. There you will see past order where if you click on them will re route you to a page including details about the order.
