@@ -1,13 +1,13 @@
-## <p align="center" >  <a href="#about"><img height="20px" src="./test_images/Nav/About.jpg"/></a>  <a href="#usage"><img height="20px" src="./test_images/Nav/Usage.jpg"/></a> <a onclick="alert('That does work yet!')"><img height="20px" src="./test_images/Nav/The_Server.jpg"/></a> <a onclick="alert('That does work yet!')"><img height="20px" src="./test_images/Nav/The_Client.jpg"/></a> <a href="mailto:nathanieljryan1994@gmail.com"><img height="20px" src="./test_images/Nav/Contact_Me.jpg"/></a>
+## <p align="center" >  <a href="#about"><img height="40px" src="./test_images/Nav/About.png"/></a>  <a href="#usage"><img height="40px" src="./test_images/Nav/Usage.png"/></a> <a onclick="alert('That does work yet!')"><img height="40px" src="./test_images/Nav/The_Server.png"/></a> <a onclick="alert('That does work yet!')"><img height="40px" src="./test_images/Nav/The_Client.png"/></a> <a href="mailto:nathanieljryan1994@gmail.com"><img height="40px" src="./test_images/Nav/Contact_Me.png"/></a>
 
-<p align="center" >
+<p align="center" style="background: #000000; border-radius: 20px; padding: 20px">
     <img width="45%" src="./test_images/Gifs/RunThru.gif"/>
     <img width="45%" src="./test_images/Gifs/Mobile.gif"/>
 </p>
 
 ___
 <p align="center" id="about">
-    <img height="50px" src="./test_images/Nav/About.jpg"/>
+    <img height="50px" src="./test_images/Nav/About.png"/>
 </p>
 
 **The application is designed with the user in mind**, with snappy transitions, animation, and constant feedback, you can be sure that the user will enjoy every transaction on our platform.
@@ -29,15 +29,15 @@ ___
 
 
 <p align="center" id="usage">
- <img height="50px" src="./test_images/Nav/Usage.jpg"/>
+ <img height="50px" src="./test_images/Nav/Usage.png"/>
 </p>
+
+
+<img width="60%" align="left" src="./test_images/Gifs/Orders.gif"/>
 
 ## Orders
 
-Find your Recent orders in one spot!
-<p align="center" >
-    <img width="75%" src="./test_images/Gifs/Orders.gif"/>
-</p>
+
 
 ___
 
