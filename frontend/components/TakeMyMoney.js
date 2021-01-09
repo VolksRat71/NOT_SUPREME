@@ -49,27 +49,30 @@ class TakeMyMoney extends Component {
         return (
             <>
                 <User>
-                    {({ data: { me } }) => (
-                        <Mutation
-                            mutation={CREATE_ORDER_MUTATION}
-                            refetchQueries={
-                                [{ query: CURRENT_USER_QUERY }]
-                            }
-                        >{createOrder => (
-                            <StripeCheckout
-                                amount={calcTotalPrice(me.cart)}
-                                name="NOT SUPREME"
-                                description={`Order of ${totalItems(me.cart)} item${totalItems(me.cart) === 1 ? '' : 's'}`}
-                                image={me.cart.length && me.cart[0].item && me.cart[0].item.image}
-                                stripeKey="pk_test_51I4xX7GXKle0o1lB9heJfv9N1qu0xRRtvLwtKPJCzCSRM3pbRtZ4hjKMYWv1qEHNEn5C4vCUixSpG0hiw4XoXAXx00AD2ilOE8"
-                                currency="USD"
-                                email={me.email}
-                                token={res => this.onToken(res, createOrder)}
-                            >
-                                {this.props.children}
-                            </StripeCheckout>
-                        )}</Mutation>
-                    )}
+                    {({ data: { me }, loading }) => {
+                        if (loading) return null
+                        return (
+                            <Mutation
+                                mutation={CREATE_ORDER_MUTATION}
+                                refetchQueries={
+                                    [{ query: CURRENT_USER_QUERY }]
+                                }
+                            >{createOrder => (
+                                <StripeCheckout
+                                    amount={calcTotalPrice(me.cart)}
+                                    name="NOT SUPREME"
+                                    description={`Order of ${totalItems(me.cart)} item${totalItems(me.cart) === 1 ? '' : 's'}`}
+                                    image={me.cart.length && me.cart[0].item && me.cart[0].item.image}
+                                    stripeKey="pk_test_51I4xX7GXKle0o1lB9heJfv9N1qu0xRRtvLwtKPJCzCSRM3pbRtZ4hjKMYWv1qEHNEn5C4vCUixSpG0hiw4XoXAXx00AD2ilOE8"
+                                    currency="USD"
+                                    email={me.email}
+                                    token={res => this.onToken(res, createOrder)}
+                                >
+                                    {this.props.children}
+                                </StripeCheckout>
+                            )}</Mutation>
+                        )
+                    }}
                 </User>
             </>
         )
@@ -77,3 +80,4 @@ class TakeMyMoney extends Component {
 }
 
 export default TakeMyMoney;
+export { CREATE_ORDER_MUTATION };

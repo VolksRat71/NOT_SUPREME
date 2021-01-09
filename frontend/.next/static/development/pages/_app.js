@@ -1430,11 +1430,12 @@ var SignOut = function SignOut(props) {
 /*!***********************************!*\
   !*** ./components/TakeMyMoney.js ***!
   \***********************************/
-/*! exports provided: default */
+/*! exports provided: default, CREATE_ORDER_MUTATION */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_ORDER_MUTATION", function() { return CREATE_ORDER_MUTATION; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -1589,7 +1590,9 @@ function (_Component) {
         },
         __self: this
       }, function (_ref2) {
-        var me = _ref2.data.me;
+        var me = _ref2.data.me,
+            loading = _ref2.loading;
+        if (loading) return null;
         return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_3__["Mutation"], {
           mutation: CREATE_ORDER_MUTATION,
           refetchQueries: [{
@@ -1597,7 +1600,7 @@ function (_Component) {
           }],
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 53
+            lineNumber: 55
           },
           __self: this
         }, function (createOrder) {
@@ -1614,7 +1617,7 @@ function (_Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 59
+              lineNumber: 61
             },
             __self: this
           }, _this2.props.children);
@@ -1627,6 +1630,7 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (TakeMyMoney);
+
 
 /***/ }),
 
