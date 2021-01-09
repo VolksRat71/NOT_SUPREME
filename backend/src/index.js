@@ -7,12 +7,11 @@ const db = require('./db');
 const server = createServer();
 
 server.express.use(cookieParser());
-console.log(`cookieparser index.js ${cookieParser}`)
 
 server.express.use((req, res, next) => {
+    console.log(`Hello from index.js ${req.headers.cookie}`)
+
     const { token } = req.cookies;
-    console.log(`res index.js ${res.cookies}`)
-    console.log(`token index.js ${token}`);
 
     if (token) {
         const { userId } = jwt.verify(token, process.env.APP_SECRET);
