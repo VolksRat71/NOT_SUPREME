@@ -9,7 +9,7 @@ const server = createServer();
 server.express.use(cookieParser());
 
 server.express.use((req, res, next) => {
-    console.log(`Hello from index.js ${req.headers.cookie}`)
+    console.log(req.headers)
 
     const { token } = req.cookies;
 
