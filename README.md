@@ -29,9 +29,15 @@ ___
     <a href="#top">top ⤴</a>
 </p>
 
-This is an independent project built by Nathaniel Ryan for the means of adding to a portfolio. This application **IS NOT** for sale. If you'd like to talk about employment opportunities or contract work please email [nathanieljryan1994@gmail.com](mailto:nathanieljryan1994@gmail.com).
+This page is for you to see what I am made of! I built this web application over the course of a month and a half as a part of a Advanced React and GraphQL tutorial that I purchased from BosType Inc.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+Welcome to "NOT SUPREME", a full stack online clothing store complete with real credit checkout. Users can search, sell, add to cart and checkout their favorite items.
+
+The application has five main models — Users, Items, Orders, CartItems, and OrderItems — all of which are relational and showcase the power of relational GraphQL Queries.
+
+The app also includes many server side bits including JWT authentication, permissions, sending email, uploading images, and charging credit cards.
+
+In addition to building both the frontend and backend of the application, I also spent the last ⅓ of the course Testing the React application.
 
 ___
 ___
@@ -53,12 +59,9 @@ ___
 </p>
 
 
-##  Ordered
+## <p align="center">Easy Ordering Process<p>
 
-<a href="#usage">top ⤴</a>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
-
+<p align="center"><a href="#usage">top ⤴</a></p>
 
 ___
 
@@ -66,11 +69,9 @@ ___
 <img id="orderz" width="60%"  src="./test_images/Gifs/Orders.gif"/>
 </p>
 
-##  Orders
+## <p align="center">Intuitive Orders Page<p>
 
-<a href="#usage">top ⤴</a>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+<p align="center"><a href="#usage">top ⤴</a></p>
 
 
 ___
@@ -79,11 +80,9 @@ ___
     <img id="passwordReset" width="60%" src="./test_images/Gifs/PassReset.gif"/>
 </p>
 
-## Password Reset
+## <p align="center">Simple Password Reset<p>
 
-<a href="#usage">top ⤴</a>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+<p align="center"><a href="#usage">top ⤴</a></p>
 
 ___
 
@@ -91,11 +90,9 @@ ___
     <img id="manage" width="60%" src="./test_images/Gifs/Permissions.gif"/>
 </p>
 
-## Manage Permissions
+## <p align="center">Manage Permissions<p>
 
-<a href="#usage">top ⤴</a>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+<p align="center"><a href="#usage">top ⤴</a></p>
 
 ___
 
@@ -103,11 +100,9 @@ ___
     <img id="test" width="60%" src="./test_images/Gifs/Permissions.gif"/>
 </p>
 
-## Testing
+## <p align="center">Unit & Mock Testing</p>
 
-<a href="#usage">top ⤴</a>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+<p align="center"><a href="#usage">top ⤴</a></p>
 
 ___
 
@@ -115,11 +110,9 @@ ___
     <img id="account" width="60%" src="./test_images/Gifs/Stripe.jpg"/>
 </p>
 
-## Accounting
+## <p align="center">Accounting via Stripe<p>
 
-<a href="#usage">top ⤴</a>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+<p align="center"><a href="#usage">top ⤴</a></p>
 
 ___
 ___
@@ -196,13 +189,13 @@ ___
 ## Prisma
 A GraphQL Database Interface
 
-Provides a set of GraphQL **CRUD APIs** for a MySQL, Postgres or MongoDB **Database**
+Provides a set of GraphQL **CRUD APIs** for a MySQL, Postgres or MongoDB **Databases**
 
 **Schema** Definition
 
 Data **Relationships**
 
-**Queried** Directly from our Yoga Server
+**Queried** Directly from the Yoga Server
 
 **Self-hosted** or **as-a-service**
 
