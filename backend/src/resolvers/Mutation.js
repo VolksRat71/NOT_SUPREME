@@ -80,7 +80,9 @@ const Mutations = {
     // Set JWT as cookie
     ctx.response.cookie('token', token, {
       httpOnly: true,
-      maxAge: 1000 * 60 * 60 * 24 * 365, // 1 year cookie
+      maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
+      SameSite: "None",
+      Secure: true
     })
     return user;
   },
@@ -101,10 +103,12 @@ const Mutations = {
     // Generate the JWT
     const token = jwt.sign({ userId: user.id }, process.env.APP_SECRET)
     // Set the cookie with the token
-    console.log(`From Mutation ${token}`)
+    console.log(ctx.response)
     ctx.response.cookie('token', token, {
       httpOnly: true,
-      maxAge: 1000 * 60 * 60 * 24 * 365, // 1 year cookie
+      maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
+      SameSite: "None",
+      Secure: true
     })
     // Return the user
     return user;
@@ -178,7 +182,9 @@ const Mutations = {
     // set JTW to toke cookie
     ctx.response.cookie('token', token, {
       httpOnly: true,
-      maxAge: 1000 * 60 * 60 * 24 * 365 // 1 year cookie
+      maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
+      SameSite: "None",
+      Secure: true
     })
     // return user
     return updatedUser;

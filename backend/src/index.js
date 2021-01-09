@@ -9,10 +9,7 @@ const server = createServer();
 server.express.use(cookieParser());
 
 server.express.use((req, res, next) => {
-    console.log(req.headers)
-
     const { token } = req.cookies;
-
     if (token) {
         const { userId } = jwt.verify(token, process.env.APP_SECRET);
 
