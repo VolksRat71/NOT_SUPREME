@@ -29,15 +29,15 @@ ___
     <a href="#top">top ⤴</a>
 </p>
 
-This page is for you to see what I am made of! I built this web application over the course of a month and a half as a part of a Advanced React and GraphQL tutorial that I purchased from BosType Inc.
+This page is for you to see what I am made of! I built this web application over the course of a month and a half (nearly 130hrs) as a part of a Advanced React and GraphQL course.
 
 Welcome to "NOT SUPREME", a full stack online clothing store complete with real credit checkout. Users can search, sell, add to cart and checkout their favorite items.
 
 The application has five main models — Users, Items, Orders, CartItems, and OrderItems — all of which are relational and showcase the power of relational GraphQL Queries.
 
-The app also includes many server side bits including JWT authentication, permissions, sending email, uploading images, and charging credit cards.
+The application also includes many server side components including JWT authentication, permissions, sending email, uploading images, and charging credit cards.
 
-In addition to building both the frontend and backend of the application, I also spent the last ⅓ of the course Testing the React application.
+In addition to building both the frontend and backend of the application, I also spent the last ⅓ of the course testing the Next.js Frontend for component validity, expected outputs, rendered components with mock rendering, etc.
 
 ___
 ___
@@ -122,7 +122,7 @@ _For Building The Interface along with:_
 
 **Next.js** for server side rendering, routing and tooling
 
-**Styled** Components for styling
+**Styled Components** for styling
 
 **React-Apollo** for interfacing with Apollo Client
 
