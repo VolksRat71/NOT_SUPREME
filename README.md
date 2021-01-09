@@ -61,8 +61,6 @@ ___
 
 ## <p align="center">Easy Ordering Process<p>
 
-<p align="center"><a href="#usage">top ⤴</a></p>
-
 ___
 
 <p align="center">
@@ -70,8 +68,6 @@ ___
 </p>
 
 ## <p align="center">Intuitive Orders Page<p>
-
-<p align="center"><a href="#usage">top ⤴</a></p>
 
 
 ___
@@ -82,8 +78,6 @@ ___
 
 ## <p align="center">Simple Password Reset<p>
 
-<p align="center"><a href="#usage">top ⤴</a></p>
-
 ___
 
 <p align="center" >
@@ -92,17 +86,13 @@ ___
 
 ## <p align="center">Manage Permissions<p>
 
-<p align="center"><a href="#usage">top ⤴</a></p>
-
 ___
 
 <p align="center" >
-    <img id="test" width="60%" src="./test_images/Gifs/Permissions.gif"/>
+    <img id="test" width="60%" src="./test_images/Gifs/Tests.gif"/>
 </p>
 
 ## <p align="center">Unit & Mock Testing</p>
-
-<p align="center"><a href="#usage">top ⤴</a></p>
 
 ___
 
@@ -111,8 +101,6 @@ ___
 </p>
 
 ## <p align="center">Accounting via Stripe<p>
-
-<p align="center"><a href="#usage">top ⤴</a></p>
 
 ___
 ___
