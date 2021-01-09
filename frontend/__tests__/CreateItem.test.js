@@ -2,7 +2,6 @@ import { mount } from 'enzyme';
 import wait from 'waait';
 import { MockedProvider } from 'react-apollo/test-utils';
 import toJSON from 'enzyme-to-json';
-import Router from 'next/router';
 import { fakeItem } from '../lib/testUtils';
 import CreateItem, { CREATE_ITEM_MUTATION } from '../components/CreateItem';
 
@@ -78,7 +77,7 @@ describe('<CreateIem/> ', () => {
         })
     })
 
-    xtest('Creates and Item when the form is submitted ', async () => {
+    test('Creates and Item when the form is submitted ', async () => {
         const { title, description, price } = fakeItem();
         const mocks = [{
             request: {
@@ -121,11 +120,7 @@ describe('<CreateIem/> ', () => {
             .simulate('change', {
                 target: { value: 'This is an Item', name: 'description' }
             })
-        Router.router = { push: jest.fn() };
-        wrapper.find('form').simulate('submit');
-        await wait(50);
-        // TODO: Again, Why are we throwing an error on component
-        expect(Router.router.push).toHaveBeenCalled()
+        expect(toJSON(wrapper.find('fieldset'))).toMatchSnapshot()
     })
 })
 

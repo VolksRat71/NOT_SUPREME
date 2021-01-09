@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddToCart /> Adds and Item to cart when clicked 1`] = `
+Object {
+  "__typename": "User",
+  "cart": Array [],
+  "email": "Delmer.Smith@yahoo.com",
+  "id": "4234",
+  "name": "Miss Coleman Berge",
+  "permissions": Array [
+    "ADMIN",
+  ],
+  Symbol(id): "User:4234",
+}
+`;
+
+exports[`<AddToCart /> Renders and matches snapshot 1`] = `
+<button
+  disabled={false}
+  onClick={[Function]}
+>
+  Add
+   to Cart
+</button>
+`;

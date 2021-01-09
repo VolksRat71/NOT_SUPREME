@@ -54,16 +54,15 @@ describe('<Nav />', () => {
         expect(toJSON(nav)).toMatchSnapshot()
     })
 
-    xtest('Renders a full <Nav /> when signed in ', async () => {
+    test('Renders a full <Nav /> when signed in ', async () => {
         const wrapper = mount(
             <MockedProvider mocks={signedInMocks}>
                 <Nav />
             </MockedProvider>
         )
         await wait();
-        const nav = wrapper.find('[data-test="nav"]')
-        // TODO: Why is the nav not displaying correctly with empty cart?
-        // console.log(nav.debug())
+        const nav = wrapper.find('[data-test="nav"]');
+        expect(toJSON(nav)).toMatchSnapshot();
     })
 
     test('Renders the amount of items in the cart', async () => {

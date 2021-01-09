@@ -59,7 +59,8 @@ const Cart = () => (
                     </footer>
                 </CartStyles>
             )
-        }}</Composed>
+        }}
+    </Composed>
 )
 
 export default Cart;
