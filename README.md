@@ -41,15 +41,15 @@ ___
  <a href="#top">top ⤴</a>
 </p>
 
-## <p align="center"> There is load of functionality, here are my favorites </p>
+## <p align="center"> There is loads of functionality, here are my favorites </p>
 
 <p align="center">
-| <a href="#ordered">Ordered</a> || <a href="#orders">Orders</a> || <a href="#password-reset">Password Reset</a> || <a href="#manage-permissions">Manage Permissions</a> |
+| <a href="#orderd">Ordered</a> || <a href="#orderz">Orders</a> || <a href="#passwordReset">Password Reset</a> || <a href="#manage">Manage Permissions</a> || <a href="#test"> Testing </a> || <a href="#account">Accounting</a> |
 </p>
 
 
 <p align="center">
-<img width="60%"  src="./test_images/Gifs/Ordered.gif"/>
+<img id="orderd" width="60%"  src="./test_images/Gifs/Ordered.gif"/>
 </p>
 
 
@@ -63,7 +63,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ___
 
 <p align="center">
-<img width="60%"  src="./test_images/Gifs/Orders.gif"/>
+<img id="orderz" width="60%"  src="./test_images/Gifs/Orders.gif"/>
 </p>
 
 ##  Orders
@@ -76,7 +76,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ___
 
 <p align="center" >
-    <img width="60%" src="./test_images/Gifs/PassReset.gif"/>
+    <img id="passwordReset" width="60%" src="./test_images/Gifs/PassReset.gif"/>
 </p>
 
 ## Password Reset
@@ -88,10 +88,34 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ___
 
 <p align="center" >
-    <img width="60%" src="./test_images/Gifs/Permissions.gif"/>
+    <img id="manage" width="60%" src="./test_images/Gifs/Permissions.gif"/>
 </p>
 
 ## Manage Permissions
+
+<a href="#usage">top ⤴</a>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+
+___
+
+<p align="center" >
+    <img id="test" width="60%" src="./test_images/Gifs/Permissions.gif"/>
+</p>
+
+## Testing
+
+<a href="#usage">top ⤴</a>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu
+
+___
+
+<p align="center" >
+    <img id="account" width="60%" src="./test_images/Gifs/Stripe.jpg"/>
+</p>
+
+## Accounting
 
 <a href="#usage">top ⤴</a>
 
