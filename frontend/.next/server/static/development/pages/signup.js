@@ -519,7 +519,6 @@ function (_Component) {
             var _ref2 = _asyncToGenerator(
             /*#__PURE__*/
             _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(e) {
-              var res;
               return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
                 while (1) {
                   switch (_context.prev = _context.next) {
@@ -529,14 +528,12 @@ function (_Component) {
                       return signIn();
 
                     case 3:
-                      res = _context.sent;
-
                       _this2.setState({
                         password: '',
                         email: ''
                       });
 
-                    case 5:
+                    case 4:
                     case "end":
                       return _context.stop();
                   }

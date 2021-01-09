@@ -8,7 +8,10 @@ function createClient({ headers }) {
     uri: process.env.NODE_ENV === 'development' ? endpoint : prodEndpoint,
     request: operation => {
       operation.setContext({
-        headers
+        fetchOptions: {
+          credentials: 'include',
+        },
+        headers,
       });
     },
     // Local data
