@@ -29,11 +29,13 @@ server.express.use(async (req, res, next) => {
     next();
 })
 
-server.start({
-    cors: {
-        credentials: true,
-        origin: process.env.FRONTEND_URL
+server.start(
+    {
+        cors: {
+            credentials: true,
+            origin: process.env.FRONTEND_URL
+        },
     },
-}, deets => {
-    console.log(`Server is running on http://localhost:${deets.port}`);
-});
+    deets => {
+        console.log(`Server is running on http://localhost:${deets.port}`);
+    });
