@@ -83,7 +83,7 @@ const Mutations = {
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
       secure: true,
       httpOnly: true,
-      sameSite: 'none',
+      sameSite: 'lax',
       path: '/'
     })
     return user;
@@ -109,9 +109,9 @@ const Mutations = {
     ctx.response.cookie('token', token, {
       Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
-      secure: true,
+      secure: false,
       httpOnly: true,
-      sameSite: 'none',
+      sameSite: 'lax',
       path: '/'
     });
     // Return the user
@@ -123,9 +123,9 @@ const Mutations = {
     ctx.response.cookie('token', token, {
       Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
-      secure: true,
+      secure: false,
       httpOnly: true,
-      sameSite: 'none',
+      sameSite: 'lax',
       path: '/'
     });
     return { message: 'Goodbye 👋' };
@@ -195,9 +195,9 @@ const Mutations = {
     ctx.response.cookie('token', token, {
       Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
-      secure: true,
+      secure: false,
       httpOnly: true,
-      sameSite: 'none',
+      sameSite: 'lax',
       path: '/'
     })
     // return user
