@@ -80,10 +80,11 @@ const Mutations = {
     // Set JWT as cookie
     ctx.response.cookie('token', token, {
       Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
-      httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
-      Secure: true,
-      sameSite: "Lax",
+      secure: true,
+      httpOnly: true,
+      sameSite: 'none',
+      path: '/'
     })
     return user;
   },
@@ -187,10 +188,11 @@ const Mutations = {
     // set JTW to toke cookie
     ctx.response.cookie('token', token, {
       Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
-      httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
-      Secure: true,
-      SameSite: "Lax",
+      secure: true,
+      httpOnly: true,
+      sameSite: 'none',
+      path: '/'
     })
     // return user
     return updatedUser;
