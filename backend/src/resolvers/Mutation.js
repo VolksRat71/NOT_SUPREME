@@ -105,8 +105,6 @@ const Mutations = {
     // Generate the JWT
     const token = jwt.sign({ userId: user.id }, process.env.APP_SECRET)
 
-    console.log(`App domain ${process.env.APP_DOMAIN}`)
-    console.log(`Node env ${process.env.NODE_ENV}`)
     // Set the cookie with the token
     ctx.response.cookie('token', token, {
       Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
