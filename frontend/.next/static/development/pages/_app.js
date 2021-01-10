@@ -1592,7 +1592,7 @@ function (_Component) {
       }, function (_ref2) {
         var me = _ref2.data.me,
             loading = _ref2.loading;
-        if (loading) return null;
+        if (loading || !me) return null;
         return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_3__["Mutation"], {
           mutation: CREATE_ORDER_MUTATION,
           refetchQueries: [{

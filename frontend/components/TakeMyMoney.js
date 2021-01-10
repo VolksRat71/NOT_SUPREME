@@ -50,7 +50,7 @@ class TakeMyMoney extends Component {
             <>
                 <User>
                     {({ data: { me }, loading }) => {
-                        if (loading) return null
+                        if (loading || !me) return null
                         return (
                             <Mutation
                                 mutation={CREATE_ORDER_MUTATION}

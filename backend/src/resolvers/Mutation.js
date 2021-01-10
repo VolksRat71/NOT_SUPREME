@@ -81,8 +81,8 @@ const Mutations = {
     ctx.response.cookie('token', token, {
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
+      Secure: true,
       SameSite: "None",
-      Secure: true
     })
     return user;
   },
@@ -107,8 +107,8 @@ const Mutations = {
     ctx.response.cookie('token', token, {
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
+      Secure: true,
       SameSite: "None",
-      Secure: true
     })
     // Return the user
     return user;
@@ -183,8 +183,8 @@ const Mutations = {
     ctx.response.cookie('token', token, {
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
+      Secure: true,
       SameSite: "None",
-      Secure: true
     })
     // return user
     return updatedUser;
