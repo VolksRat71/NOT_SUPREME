@@ -109,9 +109,9 @@ const Mutations = {
     ctx.response.cookie('token', token, {
       Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
-      secure: false,
+      secure: true,
       httpOnly: true,
-      sameSite: 'lax',
+      sameSite: 'none',
       path: '/'
     });
     // Return the user
@@ -123,9 +123,9 @@ const Mutations = {
     ctx.response.cookie('token', token, {
       Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
-      secure: false,
+      secure: true,
       httpOnly: true,
-      sameSite: 'lax',
+      sameSite: 'none',
       path: '/'
     });
     return { message: 'Goodbye 👋' };
@@ -155,8 +155,8 @@ const Mutations = {
       html: makeANiceEmail(`Here is the password reset link that you requested!
       <br>
       <a href="${process.env.FRONTEND_URL}/reset?resetToken=${resetToken}">
-        Click here to reset!
-      </a>`)
+        Click here to reset
+      </a>!`)
     })
 
     return { message: 'password reset!' }
@@ -195,9 +195,9 @@ const Mutations = {
     ctx.response.cookie('token', token, {
       Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
-      secure: false,
+      secure: true,
       httpOnly: true,
-      sameSite: 'lax',
+      sameSite: 'none',
       path: '/'
     })
     // return user

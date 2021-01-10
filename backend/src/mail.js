@@ -20,12 +20,14 @@ const makeANiceEmail = text => `
         font-size: 20px
     ">
         <p align="center">
-            <img height="70px" src="https://raw.githubusercontent.com/VolksRat71/NOT_SUPREME/master/test_images/NotSupreme.png"/>
+            <img height="70px" src="https://raw.githubusercontent.com/VolksRat71/NOT_SUPREME/master/test_images/Nav/NotSupreme.png"/>
         </p>
         <h1>Hello There,</h1>
         <p>${text}</p>
 
-        <h3>- Customer Support</h3>
+        <h2>- Customer Support</h2>
+
+        <p>P.S you should meet the <a href="https://nathanryan.tech/"> developer</a>! 😄</p>
     </div>
 `;
 
