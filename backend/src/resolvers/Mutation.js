@@ -121,7 +121,15 @@ const Mutations = {
   },
 
   signOut(parent, args, ctx, info) {
-    ctx.response.clearCookie('token')
+    const token = ''
+    ctx.response.cookie('token', token, {
+      Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
+      maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
+      secure: true,
+      httpOnly: true,
+      sameSite: 'none',
+      path: '/'
+    });
     return { message: 'Goodbye 👋' };
   },
 
