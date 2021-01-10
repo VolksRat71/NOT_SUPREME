@@ -36,6 +36,7 @@ class SignIn extends Component {
                     [{ query: CURRENT_USER_QUERY }]
                 }>
                 {(signIn, { error, loading }) => {
+                    // console.log(`Sign In reponse ${request}`);
                     return (
                         <Form
                             method="post"
