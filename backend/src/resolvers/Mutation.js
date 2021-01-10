@@ -109,7 +109,6 @@ const Mutations = {
     // Set the cookie with the token
     ctx.response.cookie('token', token, {
       Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
-      httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
       Secure: true,
       SameSite: "None",
