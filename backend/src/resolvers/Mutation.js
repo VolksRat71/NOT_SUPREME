@@ -83,7 +83,7 @@ const Mutations = {
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
       Secure: true,
-      SameSite: "Lax",
+      sameSite: "Lax",
     })
     return user;
   },
@@ -111,7 +111,9 @@ const Mutations = {
       Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
       Secure: true,
-      SameSite: "None",
+      httpOnly: true,
+      sameSite: 'lax',
+      path: '/'
     });
     // Return the user
     return user;
