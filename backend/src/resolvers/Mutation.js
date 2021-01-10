@@ -79,10 +79,11 @@ const Mutations = {
     const token = jwt.sign({ userId: user.id }, process.env.APP_SECRET);
     // Set JWT as cookie
     ctx.response.cookie('token', token, {
+      Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
       Secure: true,
-      SameSite: "None",
+      SameSite: "Lax",
     })
     return user;
   },
@@ -102,13 +103,16 @@ const Mutations = {
     }
     // Generate the JWT
     const token = jwt.sign({ userId: user.id }, process.env.APP_SECRET)
+
+    console.log(`App domain ${process.env.APP_DOMAIN}`)
+    console.log(`Node env ${process.env.NODE_ENV}`)
     // Set the cookie with the token
-    console.log(ctx.response)
     ctx.response.cookie('token', token, {
+      Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
       Secure: true,
-      SameSite: "None",
+      SameSite: "Lax",
     })
     // Return the user
     return user;
@@ -181,10 +185,11 @@ const Mutations = {
     const token = jwt.sign({ userId: updatedUser.id }, process.env.APP_SECRET);
     // set JTW to toke cookie
     ctx.response.cookie('token', token, {
+      Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
       Secure: true,
-      SameSite: "None",
+      SameSite: "Lax",
     })
     // return user
     return updatedUser;
