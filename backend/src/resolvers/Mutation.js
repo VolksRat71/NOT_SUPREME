@@ -78,12 +78,13 @@ const Mutations = {
     // Create JWT
     const token = jwt.sign({ userId: user.id }, process.env.APP_SECRET);
     // Set JWT as cookie
+
     ctx.response.cookie('token', token, {
-      Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
+      Domain: process.env.NODE_ENV === 'production' ? process.env.APP_DOMAIN : 'http://localhost:7777',
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
-      secure: true,
+      secure: process.env.NODE_ENV === 'production' ? true : false,
       httpOnly: true,
-      sameSite: 'none',
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
       path: '/'
     })
     return user;
@@ -107,11 +108,11 @@ const Mutations = {
 
     // Set the cookie with the token
     ctx.response.cookie('token', token, {
-      Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
+      Domain: process.env.NODE_ENV === 'production' ? process.env.APP_DOMAIN : 'http://localhost:7777',
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
-      secure: true,
+      secure: process.env.NODE_ENV === 'production' ? true : false,
       httpOnly: true,
-      sameSite: 'none',
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
       path: '/'
     });
     // Return the user
@@ -193,11 +194,11 @@ const Mutations = {
     const token = jwt.sign({ userId: updatedUser.id }, process.env.APP_SECRET);
     // set JTW to toke cookie
     ctx.response.cookie('token', token, {
-      Domain: process.env.NODE_ENV == 'dev' ? 'http://localhost:7777' : process.env.APP_DOMAIN,
+      Domain: process.env.NODE_ENV === 'production' ? process.env.APP_DOMAIN : 'http://localhost:7777',
       maxAge: 1000 * 60 * 60 * 24 * 365,// 1 year cookie
-      secure: true,
+      secure: process.env.NODE_ENV === 'production' ? true : false,
       httpOnly: true,
-      sameSite: 'none',
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
       path: '/'
     })
     // return user

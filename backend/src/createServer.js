@@ -6,6 +6,7 @@ const db = require("./db")
 // Create the GraphQL Yoga server
 
 function createServer() {
+    console.log('\x1b[33m%s\x1b[0m', `Currently in production? ${process.env.NODE_ENV === 'production'}`)
     return new GraphQLServer({
         typeDefs: 'src/schema.graphql',
         resolvers: {
