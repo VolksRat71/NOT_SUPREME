@@ -11,6 +11,9 @@
     <a href="#server">
         <img height="40px" src="./test_images/Nav/The_Server.png"/>
     </a>
+    <a href="https://notsupreme-next-prod.herokuapp.com/">
+        <img height="40px" src="./test_images/Nav/Deployed_App.png"/>
+    </a>
     <a href="#contact">
         <img height="40px" src="./test_images/Nav/Contact_Me.png"/>
     </a>
