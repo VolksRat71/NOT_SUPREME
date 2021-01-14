@@ -200,7 +200,7 @@ ___
 ## <p align="center"> Hello, I am Nate. </p>
 
 <p align="center">
- <img width="20%" src="https://nathanryan.tech/img/profile.jpg"/>
+ <img width="20%" src="https://avatars1.githubusercontent.com/u/47840525?s=460&u=c5536c61b6b26eb0c4cf5b10a985de3df410c281&v=4"/>
 </p>
 
 <p align="center">
