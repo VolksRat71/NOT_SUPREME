@@ -1,3 +1,9 @@
+<p align="center">
+    <img height="100" src="./test_images/Nav/NotSupreme.png"/>
+</p>
+
+___
+
 <p align="center" id="top">
     <a href="#about">
         <img height="40px" src="./test_images/Nav/About.png"/>
